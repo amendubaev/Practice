@@ -1,11 +1,16 @@
-﻿namespace Calculator
+﻿using System;
+using System.ComponentModel;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace Calculator
 {
     partial class MainForm
     {
         /// <summary>
         /// Требуется переменная конструктора.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Освободить все используемые ресурсы.
@@ -33,7 +38,7 @@
             this.Result = new System.Windows.Forms.TextBox();
             this.Output = new System.Windows.Forms.Label();
             this.InputFirstTextBox = new System.Windows.Forms.TextBox();
-            this.Addition = new System.Windows.Forms.Button();
+            this.Add = new System.Windows.Forms.Button();
             this.Subtract = new System.Windows.Forms.Button();
             this.Multiply = new System.Windows.Forms.Button();
             this.Divide = new System.Windows.Forms.Button();
@@ -80,15 +85,15 @@
             this.InputFirstTextBox.TabIndex = 1;
             this.InputFirstTextBox.Tag = "";
             // 
-            // Addition
+            // Add
             // 
-            this.Addition.Location = new System.Drawing.Point(12, 100);
-            this.Addition.Name = "Addition";
-            this.Addition.Size = new System.Drawing.Size(36, 37);
-            this.Addition.TabIndex = 3;
-            this.Addition.Text = "+";
-            this.Addition.UseVisualStyleBackColor = true;
-            this.Addition.Click += new System.EventHandler(this.AllInOneFunction);
+            this.Add.Location = new System.Drawing.Point(12, 100);
+            this.Add.Name = "Add";
+            this.Add.Size = new System.Drawing.Size(36, 37);
+            this.Add.TabIndex = 3;
+            this.Add.Text = "+";
+            this.Add.UseVisualStyleBackColor = true;
+            this.Add.Click += new System.EventHandler(this.CommonCalculator);
             // 
             // Subtract
             // 
@@ -98,7 +103,7 @@
             this.Subtract.TabIndex = 4;
             this.Subtract.Text = "-";
             this.Subtract.UseVisualStyleBackColor = true;
-            this.Subtract.Click += new System.EventHandler(this.AllInOneFunction);
+            this.Subtract.Click += new System.EventHandler(this.CommonCalculator);
             // 
             // Multiply
             // 
@@ -108,7 +113,7 @@
             this.Multiply.TabIndex = 5;
             this.Multiply.Text = "*";
             this.Multiply.UseVisualStyleBackColor = true;
-            this.Multiply.Click += new System.EventHandler(this.AllInOneFunction);
+            this.Multiply.Click += new System.EventHandler(this.CommonCalculator);
             // 
             // Divide
             // 
@@ -118,7 +123,7 @@
             this.Divide.TabIndex = 6;
             this.Divide.Text = "/";
             this.Divide.UseVisualStyleBackColor = true;
-            this.Divide.Click += new System.EventHandler(this.AllInOneFunction);
+            this.Divide.Click += new System.EventHandler(this.CommonCalculator);
             // 
             // MainForm
             // 
@@ -128,15 +133,16 @@
             this.Controls.Add(this.Divide);
             this.Controls.Add(this.Multiply);
             this.Controls.Add(this.Subtract);
-            this.Controls.Add(this.Addition);
+            this.Controls.Add(this.Add);
             this.Controls.Add(this.InputFirstTextBox);
             this.Controls.Add(this.Result);
             this.Controls.Add(this.Output);
             this.Controls.Add(this.InputSecondTextBox);
             this.Controls.Add(this.InputLabel);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";
-            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.Load += new System.EventHandler(this.MainFormLoad);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,15 +150,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Label InputLabel;
-        private System.Windows.Forms.TextBox InputSecondTextBox;
-        private System.Windows.Forms.TextBox Result;
-        private System.Windows.Forms.Label Output;
-        private System.Windows.Forms.TextBox InputFirstTextBox;
-        private System.Windows.Forms.Button Addition;
-        private System.Windows.Forms.Button Subtract;
-        private System.Windows.Forms.Button Multiply;
-        private System.Windows.Forms.Button Divide;
+        private Label InputLabel;
+        private TextBox InputSecondTextBox;
+        private TextBox Result;
+        private Label Output;
+        private TextBox InputFirstTextBox;
+        private Button Add;
+        private Button Subtract;
+        private Button Multiply;
+        private Button Divide;
     }
 }
 

@@ -8,45 +8,36 @@ namespace Calculator
         public MainForm()
         {
             InitializeComponent();
-            
-            InputFirstTextBox.KeyPress += (sen, e) => e.Handled = e.KeyChar == ';';
-            InputSecondTextBox.KeyPress += (sen, e) => e.Handled = e.KeyChar == ';';
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void MainForm_Load(object sender, EventArgs e)
+        private void MainFormLoad(object sender, EventArgs e)
         {
 
         }
 
-        private void AllInOneFunction(object sender, EventArgs e)
+        private void CommonCalculator(object sender, EventArgs e)
         {
-            double result = 0;
-
-            switch (((Button)sender).Name)
+            double result;
+            double firstField = Convert.ToDouble(InputFirstTextBox.Text);
+            double secondField = Convert.ToDouble(InputSecondTextBox.Text);
+            switch (((Button) sender).Name)
             {
-                case "Addition":
-                    result = Convert.ToDouble(InputFirstTextBox.Text) + Convert.ToDouble(InputSecondTextBox.Text);
+                case "Add":
+                    result = firstField + secondField;
                     break;
                 case "Subtract":
-                    result = Convert.ToDouble(InputFirstTextBox.Text) - Convert.ToDouble(InputSecondTextBox.Text);
+                    result = firstField - secondField;
                     break;
                 case "Multiply":
-                    result = Convert.ToDouble(InputFirstTextBox.Text) * Convert.ToDouble(InputSecondTextBox.Text);
+                    result = firstField*secondField;
                     break;
                 case "Divide":
-                    if (Convert.ToDouble(InputSecondTextBox.Text) == 0)
+                    if (firstField == 0)
                     {
-                        Result.Text = "Division by zero!";
+                        throw new Exception("Division by zero!");
                     }
-                    else
-                    {
-                        result = Convert.ToDouble(InputFirstTextBox.Text) / Convert.ToDouble(InputSecondTextBox.Text);
-                    }
+
+                    result = firstField/secondField;
                     break;
                 default:
                     throw new Exception();
