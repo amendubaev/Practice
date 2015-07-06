@@ -17,32 +17,45 @@ namespace Calculator
 
         private void CommonCalculator(object sender, EventArgs e)
         {
-            double result;
-            double firstField = Convert.ToDouble(InputFirstTextBox.Text);
-            double secondField = Convert.ToDouble(InputSecondTextBox.Text);
-            switch (((Button) sender).Name)
+            try
             {
-                case "Add":
-                    result = firstField + secondField;
-                    break;
-                case "Subtract":
-                    result = firstField - secondField;
-                    break;
-                case "Multiply":
-                    result = firstField*secondField;
-                    break;
-                case "Divide":
-                    if (firstField == 0)
-                    {
-                        throw new Exception("Division by zero!");
-                    }
-
-                    result = firstField/secondField;
-                    break;
-                default:
-                    throw new Exception();
+                double result = 0;
+                double firstField = Convert.ToDouble(InputFirstTextBox.Text);
+                double secondField = Convert.ToDouble(InputSecondTextBox.Text);
+                switch (((Button) sender).Name)
+                {
+                    case "Add":
+                        result = firstField + secondField;
+                        break;
+                    case "Subtract":
+                        result = firstField - secondField;
+                        break;
+                    case "Multiply":
+                        result = firstField*secondField;
+                        break;
+                    case "Divide":
+                        if (secondField == 0)
+                        {
+                            Result.Text = "На 0 делить НЕЛЬЗЯ!";
+                        }
+                        else
+                        {
+                            if (firstField == 0)
+                            {
+                                result = 0;
+                            }
+                            else result = firstField/secondField;
+                        }
+                        break;
+                    default:
+                        throw new Exception();
+                }
+                Result.Text = " " + result;
             }
-            Result.Text = result.ToString();
+            catch
+            {
+                Result.Text = "Введено НЕ число!";
+            }
         }
     }
 }
