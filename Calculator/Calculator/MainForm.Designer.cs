@@ -88,7 +88,7 @@
             this.Addition.TabIndex = 3;
             this.Addition.Text = "+";
             this.Addition.UseVisualStyleBackColor = true;
-            this.Addition.Click += new System.EventHandler(this.Addition_Click);
+            this.Addition.Click += new System.EventHandler(this.AllInOneFunction);
             // 
             // Subtract
             // 
@@ -98,7 +98,7 @@
             this.Subtract.TabIndex = 4;
             this.Subtract.Text = "-";
             this.Subtract.UseVisualStyleBackColor = true;
-            this.Subtract.Click += new System.EventHandler(this.Subtract_Click);
+            this.Subtract.Click += new System.EventHandler(this.AllInOneFunction);
             // 
             // Multiply
             // 
@@ -108,7 +108,7 @@
             this.Multiply.TabIndex = 5;
             this.Multiply.Text = "*";
             this.Multiply.UseVisualStyleBackColor = true;
-            this.Multiply.Click += new System.EventHandler(this.Multiply_Click);
+            this.Multiply.Click += new System.EventHandler(this.AllInOneFunction);
             // 
             // Divide
             // 
@@ -118,7 +118,7 @@
             this.Divide.TabIndex = 6;
             this.Divide.Text = "/";
             this.Divide.UseVisualStyleBackColor = true;
-            this.Divide.Click += new System.EventHandler(this.Divide_Click);
+            this.Divide.Click += new System.EventHandler(this.AllInOneFunction);
             // 
             // MainForm
             // 
