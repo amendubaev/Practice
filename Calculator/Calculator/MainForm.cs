@@ -17,7 +17,6 @@ namespace Calculator
             InitializeComponent();
         }
 
-        private float value = 0;
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -28,21 +27,39 @@ namespace Calculator
         {
 
         }
-
-        private void OutputTexBox_TextChanged(object sender, EventArgs e)
+        private void InputSecondTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
 
+
         private void Addition_Click(object sender, EventArgs e)
         {
-           InputFirstTextBox.Text = " ";
-           InputFirstTextBox.Text = (value + float.Parse(InputFirstTextBox.Text)).ToString();
+            double result = Convert.ToDouble(InputFirstTextBox.Text) + Convert.ToDouble(InputSecondTextBox.Text);
+            Result.Text = result.ToString();
         }
 
         private void Subtract_Click(object sender, EventArgs e)
         {
+            double result = Convert.ToDouble(InputFirstTextBox.Text) - Convert.ToDouble(InputSecondTextBox.Text);
+            Result.Text = result.ToString();
+        }
 
+        private void Calculate_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Multiply_Click(object sender, EventArgs e)
+        {
+            double result = Convert.ToDouble(InputFirstTextBox.Text) * Convert.ToDouble(InputSecondTextBox.Text);
+            Result.Text = result.ToString();
+        }
+
+        private void Divide_Click(object sender, EventArgs e)
+        {
+            double result = Convert.ToDouble(InputFirstTextBox.Text) / Convert.ToDouble(InputSecondTextBox.Text);
+            Result.Text = result.ToString();
         }
     }
 }

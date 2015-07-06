@@ -31,7 +31,7 @@
             this.InputLabel = new System.Windows.Forms.Label();
             this.InputSecondTextBox = new System.Windows.Forms.TextBox();
             this.Calculate = new System.Windows.Forms.Button();
-            this.OutputTexBox = new System.Windows.Forms.TextBox();
+            this.Result = new System.Windows.Forms.TextBox();
             this.Output = new System.Windows.Forms.Label();
             this.InputFirstTextBox = new System.Windows.Forms.TextBox();
             this.Addition = new System.Windows.Forms.Button();
@@ -55,6 +55,7 @@
             this.InputSecondTextBox.Name = "InputSecondTextBox";
             this.InputSecondTextBox.Size = new System.Drawing.Size(129, 20);
             this.InputSecondTextBox.TabIndex = 1;
+            this.InputSecondTextBox.TextChanged += new System.EventHandler(this.InputSecondTextBox_TextChanged);
             // 
             // Calculate
             // 
@@ -64,13 +65,15 @@
             this.Calculate.TabIndex = 2;
             this.Calculate.Text = "Calculate";
             this.Calculate.UseVisualStyleBackColor = true;
+            this.Calculate.Click += new System.EventHandler(this.Calculate_Click);
             // 
-            // OutputTexBox
+            // Result
             // 
-            this.OutputTexBox.Location = new System.Drawing.Point(12, 74);
-            this.OutputTexBox.Name = "OutputTexBox";
-            this.OutputTexBox.Size = new System.Drawing.Size(260, 20);
-            this.OutputTexBox.TabIndex = 4;
+            this.Result.Location = new System.Drawing.Point(12, 74);
+            this.Result.Name = "Result";
+            this.Result.ReadOnly = true;
+            this.Result.Size = new System.Drawing.Size(260, 20);
+            this.Result.TabIndex = 4;
             // 
             // Output
             // 
@@ -117,6 +120,7 @@
             this.Multiply.TabIndex = 8;
             this.Multiply.Text = "*";
             this.Multiply.UseVisualStyleBackColor = true;
+            this.Multiply.Click += new System.EventHandler(this.Multiply_Click);
             // 
             // Divide
             // 
@@ -126,6 +130,7 @@
             this.Divide.TabIndex = 9;
             this.Divide.Text = "/";
             this.Divide.UseVisualStyleBackColor = true;
+            this.Divide.Click += new System.EventHandler(this.Divide_Click);
             // 
             // MainForm
             // 
@@ -137,7 +142,7 @@
             this.Controls.Add(this.Subtract);
             this.Controls.Add(this.Addition);
             this.Controls.Add(this.InputFirstTextBox);
-            this.Controls.Add(this.OutputTexBox);
+            this.Controls.Add(this.Result);
             this.Controls.Add(this.Output);
             this.Controls.Add(this.Calculate);
             this.Controls.Add(this.InputSecondTextBox);
@@ -155,7 +160,7 @@
         private System.Windows.Forms.Label InputLabel;
         private System.Windows.Forms.TextBox InputSecondTextBox;
         private System.Windows.Forms.Button Calculate;
-        private System.Windows.Forms.TextBox OutputTexBox;
+        private System.Windows.Forms.TextBox Result;
         private System.Windows.Forms.Label Output;
         private System.Windows.Forms.TextBox InputFirstTextBox;
         private System.Windows.Forms.Button Addition;
