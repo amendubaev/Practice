@@ -17,6 +17,8 @@ namespace Calculator
             InitializeComponent();
         }
 
+        private float value = 0;
+
         private void MainForm_Load(object sender, EventArgs e)
         {
 
@@ -28,6 +30,17 @@ namespace Calculator
         }
 
         private void OutputTexBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Addition_Click(object sender, EventArgs e)
+        {
+           InputFirstTextBox.Text = " ";
+           InputFirstTextBox.Text = (value + float.Parse(InputFirstTextBox.Text)).ToString();
+        }
+
+        private void Subtract_Click(object sender, EventArgs e)
         {
 
         }
