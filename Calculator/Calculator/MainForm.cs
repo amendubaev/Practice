@@ -31,12 +31,12 @@ namespace Calculator
                         result = firstField - secondField;
                         break;
                     case "Multiply":
-                        result = firstField*secondField;
+                        result = firstField * secondField;
                         break;
                     case "Divide":
                         if (secondField == 0)
                         {
-                            Result.Text = "На 0 делить НЕЛЬЗЯ!";
+                            Result.Text = "Division by 0!";
                         }
                         else
                         {
@@ -54,7 +54,7 @@ namespace Calculator
             }
             catch
             {
-                Result.Text = "Введено НЕ число!";
+                Result.Text = "Enter number!";
             }
         }
     }
