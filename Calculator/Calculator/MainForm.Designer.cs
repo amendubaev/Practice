@@ -30,7 +30,6 @@
         {
             this.InputLabel = new System.Windows.Forms.Label();
             this.InputSecondTextBox = new System.Windows.Forms.TextBox();
-            this.Calculate = new System.Windows.Forms.Button();
             this.Result = new System.Windows.Forms.TextBox();
             this.Output = new System.Windows.Forms.Label();
             this.InputFirstTextBox = new System.Windows.Forms.TextBox();
@@ -54,18 +53,7 @@
             this.InputSecondTextBox.Location = new System.Drawing.Point(146, 25);
             this.InputSecondTextBox.Name = "InputSecondTextBox";
             this.InputSecondTextBox.Size = new System.Drawing.Size(129, 20);
-            this.InputSecondTextBox.TabIndex = 1;
-            this.InputSecondTextBox.TextChanged += new System.EventHandler(this.InputSecondTextBox_TextChanged);
-            // 
-            // Calculate
-            // 
-            this.Calculate.Location = new System.Drawing.Point(180, 100);
-            this.Calculate.Name = "Calculate";
-            this.Calculate.Size = new System.Drawing.Size(92, 37);
-            this.Calculate.TabIndex = 2;
-            this.Calculate.Text = "Calculate";
-            this.Calculate.UseVisualStyleBackColor = true;
-            this.Calculate.Click += new System.EventHandler(this.Calculate_Click);
+            this.InputSecondTextBox.TabIndex = 2;
             // 
             // Result
             // 
@@ -89,15 +77,15 @@
             this.InputFirstTextBox.Location = new System.Drawing.Point(12, 25);
             this.InputFirstTextBox.Name = "InputFirstTextBox";
             this.InputFirstTextBox.Size = new System.Drawing.Size(112, 20);
-            this.InputFirstTextBox.TabIndex = 5;
-            this.InputFirstTextBox.TextChanged += new System.EventHandler(this.InputFirstTextBox_TextChanged);
+            this.InputFirstTextBox.TabIndex = 1;
+            this.InputFirstTextBox.Tag = "";
             // 
             // Addition
             // 
             this.Addition.Location = new System.Drawing.Point(12, 100);
             this.Addition.Name = "Addition";
             this.Addition.Size = new System.Drawing.Size(36, 37);
-            this.Addition.TabIndex = 6;
+            this.Addition.TabIndex = 3;
             this.Addition.Text = "+";
             this.Addition.UseVisualStyleBackColor = true;
             this.Addition.Click += new System.EventHandler(this.Addition_Click);
@@ -107,7 +95,7 @@
             this.Subtract.Location = new System.Drawing.Point(54, 100);
             this.Subtract.Name = "Subtract";
             this.Subtract.Size = new System.Drawing.Size(36, 37);
-            this.Subtract.TabIndex = 7;
+            this.Subtract.TabIndex = 4;
             this.Subtract.Text = "-";
             this.Subtract.UseVisualStyleBackColor = true;
             this.Subtract.Click += new System.EventHandler(this.Subtract_Click);
@@ -117,7 +105,7 @@
             this.Multiply.Location = new System.Drawing.Point(96, 100);
             this.Multiply.Name = "Multiply";
             this.Multiply.Size = new System.Drawing.Size(36, 37);
-            this.Multiply.TabIndex = 8;
+            this.Multiply.TabIndex = 5;
             this.Multiply.Text = "*";
             this.Multiply.UseVisualStyleBackColor = true;
             this.Multiply.Click += new System.EventHandler(this.Multiply_Click);
@@ -127,7 +115,7 @@
             this.Divide.Location = new System.Drawing.Point(138, 100);
             this.Divide.Name = "Divide";
             this.Divide.Size = new System.Drawing.Size(36, 37);
-            this.Divide.TabIndex = 9;
+            this.Divide.TabIndex = 6;
             this.Divide.Text = "/";
             this.Divide.UseVisualStyleBackColor = true;
             this.Divide.Click += new System.EventHandler(this.Divide_Click);
@@ -144,7 +132,6 @@
             this.Controls.Add(this.InputFirstTextBox);
             this.Controls.Add(this.Result);
             this.Controls.Add(this.Output);
-            this.Controls.Add(this.Calculate);
             this.Controls.Add(this.InputSecondTextBox);
             this.Controls.Add(this.InputLabel);
             this.Name = "MainForm";
@@ -159,7 +146,6 @@
 
         private System.Windows.Forms.Label InputLabel;
         private System.Windows.Forms.TextBox InputSecondTextBox;
-        private System.Windows.Forms.Button Calculate;
         private System.Windows.Forms.TextBox Result;
         private System.Windows.Forms.Label Output;
         private System.Windows.Forms.TextBox InputFirstTextBox;
