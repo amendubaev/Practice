@@ -53,8 +53,8 @@ namespace Calculator
 
         public void SinInCalculator(object sender, EventArgs e)
         {
-
-            Result.Text = Convert.ToString(Math.Sin((Convert.ToDouble(Result.Text) * Math.PI)));
+            double firstField = Convert.ToDouble(InputFirstTextBox.Text);
+            Result.Text = Convert.ToString(Math.Round(Math.Sin((firstField * Math.PI)/180), 11));
         }
 
         private void PowInCalculator(object sender, EventArgs e)
