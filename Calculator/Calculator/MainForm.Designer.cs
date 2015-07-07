@@ -42,6 +42,8 @@ namespace Calculator
             this.Subtract = new System.Windows.Forms.Button();
             this.Multiply = new System.Windows.Forms.Button();
             this.Divide = new System.Windows.Forms.Button();
+            this.pow = new System.Windows.Forms.Button();
+            this.sin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // InputLabel
@@ -125,11 +127,33 @@ namespace Calculator
             this.Divide.UseVisualStyleBackColor = true;
             this.Divide.Click += new System.EventHandler(this.CommonCalculator);
             // 
+            // pow
+            // 
+            this.pow.Location = new System.Drawing.Point(180, 100);
+            this.pow.Name = "pow";
+            this.pow.Size = new System.Drawing.Size(36, 37);
+            this.pow.TabIndex = 7;
+            this.pow.Text = "x^2";
+            this.pow.UseVisualStyleBackColor = true;
+            this.pow.Click += new System.EventHandler(this.PowInCalculator);
+            // 
+            // sin
+            // 
+            this.sin.Location = new System.Drawing.Point(222, 100);
+            this.sin.Name = "sin";
+            this.sin.Size = new System.Drawing.Size(36, 37);
+            this.sin.TabIndex = 8;
+            this.sin.Text = "sin";
+            this.sin.UseVisualStyleBackColor = true;
+            this.sin.Click += new System.EventHandler(this.SinInCalculator);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.sin);
+            this.Controls.Add(this.pow);
             this.Controls.Add(this.Divide);
             this.Controls.Add(this.Multiply);
             this.Controls.Add(this.Subtract);
@@ -159,6 +183,8 @@ namespace Calculator
         private Button Subtract;
         private Button Multiply;
         private Button Divide;
+        private Button pow;
+        private Button sin;
     }
 }
 
