@@ -44,6 +44,11 @@ namespace Calculator
             this.Divide = new System.Windows.Forms.Button();
             this.Pow = new System.Windows.Forms.Button();
             this.Sin = new System.Windows.Forms.Button();
+            this.Abs = new System.Windows.Forms.Button();
+            this.Sqrt = new System.Windows.Forms.Button();
+            this.Cos = new System.Windows.Forms.Button();
+            this.Tg = new System.Windows.Forms.Button();
+            this.Ctg = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // InputLabel
@@ -61,7 +66,7 @@ namespace Calculator
             this.InputSecondTextBox.Name = "InputSecondTextBox";
             this.InputSecondTextBox.Size = new System.Drawing.Size(129, 20);
             this.InputSecondTextBox.TabIndex = 2;
-            this.InputSecondTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputSecondTextBox_KeyPress);
+            this.InputSecondTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputSecondTextBoxKeyPress);
             // 
             // Result
             // 
@@ -88,7 +93,7 @@ namespace Calculator
             this.InputFirstTextBox.Size = new System.Drawing.Size(128, 20);
             this.InputFirstTextBox.TabIndex = 1;
             this.InputFirstTextBox.Tag = "";
-            this.InputFirstTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputFirstTextBox_KeyPress);
+            this.InputFirstTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputFirstTextBoxKeyPress);
             // 
             // Add
             // 
@@ -168,11 +173,81 @@ namespace Calculator
             this.Sin.UseVisualStyleBackColor = true;
             this.Sin.Click += new System.EventHandler(this.CalculatorWithOneArg);
             // 
+            // Abs
+            // 
+            this.Abs.BackColor = System.Drawing.Color.Orange;
+            this.Abs.FlatAppearance.BorderSize = 0;
+            this.Abs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Abs.Location = new System.Drawing.Point(15, 143);
+            this.Abs.Name = "Abs";
+            this.Abs.Size = new System.Drawing.Size(38, 37);
+            this.Abs.TabIndex = 9;
+            this.Abs.Text = "|x|";
+            this.Abs.UseVisualStyleBackColor = false;
+            this.Abs.Click += new System.EventHandler(this.CalculatorWithOneArg);
+            // 
+            // Sqrt
+            // 
+            this.Sqrt.BackColor = System.Drawing.Color.Orange;
+            this.Sqrt.FlatAppearance.BorderSize = 0;
+            this.Sqrt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Sqrt.Location = new System.Drawing.Point(58, 143);
+            this.Sqrt.Name = "Sqrt";
+            this.Sqrt.Size = new System.Drawing.Size(38, 37);
+            this.Sqrt.TabIndex = 10;
+            this.Sqrt.Text = "sqrt";
+            this.Sqrt.UseVisualStyleBackColor = false;
+            this.Sqrt.Click += new System.EventHandler(this.CalculatorWithOneArg);
+            // 
+            // Cos
+            // 
+            this.Cos.BackColor = System.Drawing.Color.Orange;
+            this.Cos.FlatAppearance.BorderSize = 0;
+            this.Cos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cos.Location = new System.Drawing.Point(102, 143);
+            this.Cos.Name = "Cos";
+            this.Cos.Size = new System.Drawing.Size(38, 37);
+            this.Cos.TabIndex = 11;
+            this.Cos.Text = "cos";
+            this.Cos.UseVisualStyleBackColor = false;
+            this.Cos.Click += new System.EventHandler(this.CalculatorWithOneArg);
+            // 
+            // Tg
+            // 
+            this.Tg.BackColor = System.Drawing.Color.Orange;
+            this.Tg.FlatAppearance.BorderSize = 0;
+            this.Tg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Tg.Location = new System.Drawing.Point(146, 143);
+            this.Tg.Name = "Tg";
+            this.Tg.Size = new System.Drawing.Size(38, 37);
+            this.Tg.TabIndex = 12;
+            this.Tg.Text = "tg";
+            this.Tg.UseVisualStyleBackColor = false;
+            this.Tg.Click += new System.EventHandler(this.CalculatorWithOneArg);
+            // 
+            // Ctg
+            // 
+            this.Ctg.BackColor = System.Drawing.Color.Orange;
+            this.Ctg.FlatAppearance.BorderSize = 0;
+            this.Ctg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ctg.Location = new System.Drawing.Point(190, 143);
+            this.Ctg.Name = "Ctg";
+            this.Ctg.Size = new System.Drawing.Size(38, 37);
+            this.Ctg.TabIndex = 13;
+            this.Ctg.Text = "ctg";
+            this.Ctg.UseVisualStyleBackColor = false;
+            this.Ctg.Click += new System.EventHandler(this.CalculatorWithOneArg);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.Ctg);
+            this.Controls.Add(this.Tg);
+            this.Controls.Add(this.Cos);
+            this.Controls.Add(this.Sqrt);
+            this.Controls.Add(this.Abs);
             this.Controls.Add(this.Sin);
             this.Controls.Add(this.Pow);
             this.Controls.Add(this.Divide);
@@ -206,6 +281,11 @@ namespace Calculator
         private Button Divide;
         private Button Pow;
         private Button Sin;
+        private Button Abs;
+        private Button Sqrt;
+        private Button Cos;
+        private Button Tg;
+        private Button Ctg;
     }
 }
 

@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Calculator
 {
-    public class Add : ITwoArguments
+    class Abs : IOneArgument
     {
-        public double Calculate(double firstField, double secondField)
+        public double Calculate(double firstField)
         {
-            return (firstField + secondField);
+            return (Math.Abs(firstField));
         }
     }
 }

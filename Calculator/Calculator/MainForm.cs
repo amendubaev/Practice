@@ -34,7 +34,7 @@ namespace Calculator
         }
 
 
-        private void InputFirstTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        private void InputFirstTextBoxKeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && (e.KeyChar != 8) && (e.KeyChar != 45) && (e.KeyChar != 44))
             {
@@ -42,7 +42,7 @@ namespace Calculator
             }
         }
 
-        private void InputSecondTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        private void InputSecondTextBoxKeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && (e.KeyChar != 8) && (e.KeyChar != 45) && (e.KeyChar != 44))
             {

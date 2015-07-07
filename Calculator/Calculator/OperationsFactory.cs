@@ -26,6 +26,16 @@ namespace Calculator
         {
             switch (operation)
             {
+                case "Cos":
+                    return new Cos();
+                case "Ctg":
+                    return new Ctg();
+                case "Sqrt":
+                    return new Sqrt();
+                case "Tg":
+                    return new Tg();
+                case "Abs":
+                    return new Abs();
                 case "Sin":
                     return new Sin();
                 default:
