@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Calculator
 {
-    class Pow : IOperation
+    class Pow : ITwoArguments
     {
-        public double Calculate(double argument, double log)
+        public double Calculate(double firstField, double secondField)
         {
-            return Math.Pow(argument, log);
+            return Math.Pow(firstField, secondField);
         }
     }
 }

@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Calculator
 {
-    class Add : IOperation
+    class Add : ITwoArguments
     {
-        public double Calculate(double x, double y)
+        public double Calculate(double firstField, double secondField)
         {
-            return (x + y);
+            return (firstField + secondField);
         }
     }
 }

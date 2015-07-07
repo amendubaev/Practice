@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Calculator
 {
-    class Sin : ITrigonometria
+    class Sin : IOneArgument
     {
-        public double Calculate(double argument)
+        public double Calculate(double firstField)
         {
-            return Math.Sin(argument);
+            return Math.Sin(firstField);
         }
     }
 }

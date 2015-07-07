@@ -82,9 +82,10 @@ namespace Calculator
             // 
             // InputFirstTextBox
             // 
+            this.InputFirstTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.InputFirstTextBox.Location = new System.Drawing.Point(12, 25);
             this.InputFirstTextBox.Name = "InputFirstTextBox";
-            this.InputFirstTextBox.Size = new System.Drawing.Size(112, 20);
+            this.InputFirstTextBox.Size = new System.Drawing.Size(128, 20);
             this.InputFirstTextBox.TabIndex = 1;
             this.InputFirstTextBox.Tag = "";
             this.InputFirstTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputFirstTextBox_KeyPress);
@@ -100,7 +101,7 @@ namespace Calculator
             this.Add.TabIndex = 3;
             this.Add.Text = "+";
             this.Add.UseVisualStyleBackColor = false;
-            this.Add.Click += new System.EventHandler(this.CommonCalculator);
+            this.Add.Click += new System.EventHandler(this.CalculatorWithTwoArgs);
             // 
             // Subtract
             // 
@@ -113,7 +114,7 @@ namespace Calculator
             this.Subtract.TabIndex = 4;
             this.Subtract.Text = "-";
             this.Subtract.UseVisualStyleBackColor = true;
-            this.Subtract.Click += new System.EventHandler(this.CommonCalculator);
+            this.Subtract.Click += new System.EventHandler(this.CalculatorWithTwoArgs);
             // 
             // Multiply
             // 
@@ -126,7 +127,7 @@ namespace Calculator
             this.Multiply.TabIndex = 5;
             this.Multiply.Text = "*";
             this.Multiply.UseVisualStyleBackColor = true;
-            this.Multiply.Click += new System.EventHandler(this.CommonCalculator);
+            this.Multiply.Click += new System.EventHandler(this.CalculatorWithTwoArgs);
             // 
             // Divide
             // 
@@ -139,7 +140,7 @@ namespace Calculator
             this.Divide.TabIndex = 6;
             this.Divide.Text = "/";
             this.Divide.UseVisualStyleBackColor = true;
-            this.Divide.Click += new System.EventHandler(this.CommonCalculator);
+            this.Divide.Click += new System.EventHandler(this.CalculatorWithTwoArgs);
             // 
             // Pow
             // 
@@ -152,7 +153,7 @@ namespace Calculator
             this.Pow.TabIndex = 7;
             this.Pow.Text = "x^";
             this.Pow.UseVisualStyleBackColor = true;
-            this.Pow.Click += new System.EventHandler(this.PowInCalculator);
+            this.Pow.Click += new System.EventHandler(this.CalculatorWithTwoArgs);
             // 
             // Sin
             // 
@@ -165,7 +166,7 @@ namespace Calculator
             this.Sin.TabIndex = 8;
             this.Sin.Text = "sin";
             this.Sin.UseVisualStyleBackColor = true;
-            this.Sin.Click += new System.EventHandler(this.SinInCalculator);
+            this.Sin.Click += new System.EventHandler(this.CalculatorWithOneArg);
             // 
             // MainForm
             // 

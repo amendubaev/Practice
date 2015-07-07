@@ -8,8 +8,9 @@ namespace Calculator
 {
     public static class OperationsFactory
     {
-        public static IOperation CreateOperation(string operation)
+        public static ITwoArguments CreateOperation(string operation)
         {
+           
             switch (operation)
             {
                 case "Multiply": return new Multiply();
@@ -21,12 +22,14 @@ namespace Calculator
             }
         }
 
-        public static ITrigonometria CreateTrigonometriaOperation(string operation)
+        public static IOneArgument CreateTrigonometriaOperation(string operation)
         {
             switch (operation)
             {
-                case "Sin": return new Sin();
-                default: throw new Exception("Unknown operation!");
+                case "Sin":
+                    return new Sin();
+                default:
+                    throw new Exception("Unknown operation!");
             }
         }
     }
