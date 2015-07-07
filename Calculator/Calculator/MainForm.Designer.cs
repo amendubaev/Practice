@@ -42,8 +42,8 @@ namespace Calculator
             this.Subtract = new System.Windows.Forms.Button();
             this.Multiply = new System.Windows.Forms.Button();
             this.Divide = new System.Windows.Forms.Button();
-            this.pow = new System.Windows.Forms.Button();
-            this.sin = new System.Windows.Forms.Button();
+            this.Pow = new System.Windows.Forms.Button();
+            this.Sin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // InputLabel
@@ -61,6 +61,7 @@ namespace Calculator
             this.InputSecondTextBox.Name = "InputSecondTextBox";
             this.InputSecondTextBox.Size = new System.Drawing.Size(129, 20);
             this.InputSecondTextBox.TabIndex = 2;
+            this.InputSecondTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputSecondTextBox_KeyPress);
             // 
             // Result
             // 
@@ -86,22 +87,29 @@ namespace Calculator
             this.InputFirstTextBox.Size = new System.Drawing.Size(112, 20);
             this.InputFirstTextBox.TabIndex = 1;
             this.InputFirstTextBox.Tag = "";
+            this.InputFirstTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputFirstTextBox_KeyPress);
             // 
             // Add
             // 
-            this.Add.Location = new System.Drawing.Point(12, 100);
+            this.Add.BackColor = System.Drawing.Color.Orange;
+            this.Add.FlatAppearance.BorderSize = 0;
+            this.Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Add.Location = new System.Drawing.Point(14, 100);
             this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(36, 37);
+            this.Add.Size = new System.Drawing.Size(38, 37);
             this.Add.TabIndex = 3;
             this.Add.Text = "+";
-            this.Add.UseVisualStyleBackColor = true;
+            this.Add.UseVisualStyleBackColor = false;
             this.Add.Click += new System.EventHandler(this.CommonCalculator);
             // 
             // Subtract
             // 
-            this.Subtract.Location = new System.Drawing.Point(54, 100);
+            this.Subtract.BackColor = System.Drawing.Color.Orange;
+            this.Subtract.FlatAppearance.BorderSize = 0;
+            this.Subtract.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Subtract.Location = new System.Drawing.Point(58, 100);
             this.Subtract.Name = "Subtract";
-            this.Subtract.Size = new System.Drawing.Size(36, 37);
+            this.Subtract.Size = new System.Drawing.Size(38, 37);
             this.Subtract.TabIndex = 4;
             this.Subtract.Text = "-";
             this.Subtract.UseVisualStyleBackColor = true;
@@ -109,9 +117,12 @@ namespace Calculator
             // 
             // Multiply
             // 
-            this.Multiply.Location = new System.Drawing.Point(96, 100);
+            this.Multiply.BackColor = System.Drawing.Color.Orange;
+            this.Multiply.FlatAppearance.BorderSize = 0;
+            this.Multiply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Multiply.Location = new System.Drawing.Point(102, 100);
             this.Multiply.Name = "Multiply";
-            this.Multiply.Size = new System.Drawing.Size(36, 37);
+            this.Multiply.Size = new System.Drawing.Size(38, 37);
             this.Multiply.TabIndex = 5;
             this.Multiply.Text = "*";
             this.Multiply.UseVisualStyleBackColor = true;
@@ -119,41 +130,50 @@ namespace Calculator
             // 
             // Divide
             // 
-            this.Divide.Location = new System.Drawing.Point(138, 100);
+            this.Divide.BackColor = System.Drawing.Color.Orange;
+            this.Divide.FlatAppearance.BorderSize = 0;
+            this.Divide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Divide.Location = new System.Drawing.Point(146, 100);
             this.Divide.Name = "Divide";
-            this.Divide.Size = new System.Drawing.Size(36, 37);
+            this.Divide.Size = new System.Drawing.Size(38, 37);
             this.Divide.TabIndex = 6;
             this.Divide.Text = "/";
             this.Divide.UseVisualStyleBackColor = true;
             this.Divide.Click += new System.EventHandler(this.CommonCalculator);
             // 
-            // pow
+            // Pow
             // 
-            this.pow.Location = new System.Drawing.Point(180, 100);
-            this.pow.Name = "pow";
-            this.pow.Size = new System.Drawing.Size(36, 37);
-            this.pow.TabIndex = 7;
-            this.pow.Text = "x^2";
-            this.pow.UseVisualStyleBackColor = true;
-            this.pow.Click += new System.EventHandler(this.PowInCalculator);
+            this.Pow.BackColor = System.Drawing.Color.Orange;
+            this.Pow.FlatAppearance.BorderSize = 0;
+            this.Pow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Pow.Location = new System.Drawing.Point(190, 100);
+            this.Pow.Name = "Pow";
+            this.Pow.Size = new System.Drawing.Size(38, 37);
+            this.Pow.TabIndex = 7;
+            this.Pow.Text = "x^";
+            this.Pow.UseVisualStyleBackColor = true;
+            this.Pow.Click += new System.EventHandler(this.PowInCalculator);
             // 
-            // sin
+            // Sin
             // 
-            this.sin.Location = new System.Drawing.Point(222, 100);
-            this.sin.Name = "sin";
-            this.sin.Size = new System.Drawing.Size(36, 37);
-            this.sin.TabIndex = 8;
-            this.sin.Text = "sin";
-            this.sin.UseVisualStyleBackColor = true;
-            this.sin.Click += new System.EventHandler(this.SinInCalculator);
+            this.Sin.BackColor = System.Drawing.Color.Orange;
+            this.Sin.FlatAppearance.BorderSize = 0;
+            this.Sin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Sin.Location = new System.Drawing.Point(234, 100);
+            this.Sin.Name = "Sin";
+            this.Sin.Size = new System.Drawing.Size(38, 37);
+            this.Sin.TabIndex = 8;
+            this.Sin.Text = "sin";
+            this.Sin.UseVisualStyleBackColor = true;
+            this.Sin.Click += new System.EventHandler(this.SinInCalculator);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.sin);
-            this.Controls.Add(this.pow);
+            this.Controls.Add(this.Sin);
+            this.Controls.Add(this.Pow);
             this.Controls.Add(this.Divide);
             this.Controls.Add(this.Multiply);
             this.Controls.Add(this.Subtract);
@@ -183,8 +203,8 @@ namespace Calculator
         private Button Subtract;
         private Button Multiply;
         private Button Divide;
-        private Button pow;
-        private Button sin;
+        private Button Pow;
+        private Button Sin;
     }
 }
 

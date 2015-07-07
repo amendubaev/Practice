@@ -63,5 +63,20 @@ namespace Calculator
             double secondField = Convert.ToDouble(InputSecondTextBox.Text);
             Result.Text = Convert.ToString(Math.Pow(firstField, secondField));
         }
+        private void InputFirstTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && (e.KeyChar != 8) && (e.KeyChar != 45) && (e.KeyChar != 44))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void InputSecondTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && (e.KeyChar != 8) && (e.KeyChar != 45) && (e.KeyChar != 44))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
