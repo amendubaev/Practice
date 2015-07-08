@@ -1,19 +1,27 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 
 namespace Calculator.Tests
 {
     [TestFixture]
-    public class AbsCalculationTest
+    public class DivideCalculationTest
     {
-        [TestCase(-3, 3, 1.0)]
-        [TestCase(-100, 100, 1.0)]
-        [TestCase(32, 32, 1.0)]
-        [TestCase(-4912, 4912, 1.0)]
-        public void CalculateTest(int argument, int result, double accuracy)
+        [TestCase(9, 3, 3)]
+        [TestCase(-100, -50, 2)]
+        [TestCase(32, 2, 16)]
+        public void CalculateTest(double firstArgument,double secondArgument, double result)
         {
-            var calculator = new Abs();
-            var testResult = calculator.Calculate(argument);
-            Assert.AreEqual(testResult, result, accuracy);
+            var calculator = new Divide();
+            var testResult = calculator.Calculate(firstArgument, secondArgument);
+            Assert.AreEqual(testResult, result);
+        }
+
+        [Test]
+        [ExpectedException(typeof(Exception))]
+        public void DivisionByZero()
+        {
+            var calculator = new Divide();
+            calculator.Calculate(22,0);
         }
     }
 

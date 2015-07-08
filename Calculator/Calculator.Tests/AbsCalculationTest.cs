@@ -9,7 +9,7 @@ namespace Calculator.Tests
         [TestCase(-100, 100, 1.0)]
         [TestCase(32, 32, 1.0)]
         [TestCase(-4912, 4912, 1.0)]
-        public void CalculateTest(int argument, int result, double accuracy)
+        public void CalculateTest(double argument, double result, double accuracy)
         {
             var calculator = new Abs();
             var testResult = calculator.Calculate(argument);

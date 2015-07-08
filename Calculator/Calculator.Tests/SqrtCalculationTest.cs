@@ -1,19 +1,28 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 
 namespace Calculator.Tests
 {
     [TestFixture]
-    public class AddTest
+    public class SqrtCalculationTest
     {
-        [TestCase(32,33,65)]
-        [TestCase(2, 4, 6)]
-        [TestCase(12, 32, 44)]
-        [TestCase(3212, 6536, 9748)]
-        public void CalculateTest(int firstArgument, int secondArgument,int result)
+        [TestCase(4, 2, 1.0)]
+        [TestCase(9, 3, 1.0)]
+        [TestCase(16, 4, 1.0)]
+        [TestCase(256, 16, 1.0)]
+        public void CalculateTest(double argument, double result, double accuracy)
         {
-            var calculator = new Add();
-            double testResult = calculator.Calculate(firstArgument, secondArgument);
-            Assert.AreEqual(testResult,result);
+            var calculator = new Sqrt();
+            double testResult = calculator.Calculate(argument);
+            Assert.AreEqual(testResult,result, accuracy);
+        }
+
+        [Test]
+        [ExpectedException(typeof(Exception))]
+        public void ZeroUnderTheSqrt()
+        {
+            var calculator = new Sqrt();
+            calculator.Calculate(0);
         }
     }
 }

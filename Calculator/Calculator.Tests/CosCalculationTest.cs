@@ -3,15 +3,15 @@
 namespace Calculator.Tests
 {
     [TestFixture]
-    public class AbsCalculationTest
+    public class CosCalculationTest
     {
-        [TestCase(-3, 3, 1.0)]
-        [TestCase(-100, 100, 1.0)]
-        [TestCase(32, 32, 1.0)]
-        [TestCase(-4912, 4912, 1.0)]
-        public void CalculateTest(int argument, int result, double accuracy)
+        [TestCase(90, -0.45, 0.01)]
+        [TestCase(100, 0.86, 0.01)]
+        [TestCase(32, 0.83, 0.01)]
+        [TestCase(180, -0.60, 0.01)]
+        public void CalculateTest(double argument, double result, double accuracy)
         {
-            var calculator = new Abs();
+            var calculator = new Cos();
             var testResult = calculator.Calculate(argument);
             Assert.AreEqual(testResult, result, accuracy);
         }

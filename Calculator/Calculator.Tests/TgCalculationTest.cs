@@ -1,19 +1,27 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 
 namespace Calculator.Tests
 {
     [TestFixture]
-    public class AddTest
+    public class TgCalculationTest
     {
-        [TestCase(32,33,65)]
-        [TestCase(2, 4, 6)]
-        [TestCase(12, 32, 44)]
-        [TestCase(3212, 6536, 9748)]
-        public void CalculateTest(int firstArgument, int secondArgument,int result)
+        [TestCase(32, 0.66, 0.01)]
+        [TestCase(0, 0, 0.01)]
+        [TestCase(108, 2.46, 0.01)]
+        public void CalculateTest(double argument, double result, double accuracy)
         {
-            var calculator = new Add();
-            double testResult = calculator.Calculate(firstArgument, secondArgument);
-            Assert.AreEqual(testResult,result);
+            var calculator = new Tg();
+            double testResult = calculator.Calculate(argument);
+            Assert.AreEqual(testResult,result, accuracy);
+        }
+
+        [Test]
+        [ExpectedException(typeof(Exception))]
+        public void TanHalfPi()
+        {
+            var calculator = new Tg();
+            calculator.Calculate(90);
         }
     }
 }

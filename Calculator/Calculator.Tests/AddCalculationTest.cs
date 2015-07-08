@@ -3,13 +3,13 @@
 namespace Calculator.Tests
 {
     [TestFixture]
-    public class AddTest
+    public class AddCalculationTest
     {
         [TestCase(32,33,65)]
         [TestCase(2, 4, 6)]
         [TestCase(12, 32, 44)]
         [TestCase(3212, 6536, 9748)]
-        public void CalculateTest(int firstArgument, int secondArgument,int result)
+        public void CalculateTest(double firstArgument, double secondArgument, double result)
         {
             var calculator = new Add();
             double testResult = calculator.Calculate(firstArgument, secondArgument);

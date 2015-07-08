@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OperationsFactoryTest.cs" />
     <Compile Include="SubtractCalculationTest.cs" />
     <Compile Include="TgCalculationTest.cs" />
     <Compile Include="DivideCalculationTest.cs" />

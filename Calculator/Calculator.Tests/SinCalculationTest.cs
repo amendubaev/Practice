@@ -3,15 +3,14 @@
 namespace Calculator.Tests
 {
     [TestFixture]
-    public class AbsCalculationTest
+    public class SinCalculationTest
     {
-        [TestCase(-3, 3, 1.0)]
-        [TestCase(-100, 100, 1.0)]
-        [TestCase(32, 32, 1.0)]
-        [TestCase(-4912, 4912, 1.0)]
-        public void CalculateTest(int argument, int result, double accuracy)
+        [TestCase(90, 0.89, 0.01)]
+        [TestCase(-100, 0.51, 0.01)]
+        [TestCase(30, -0.98, 0.01)]
+        public void CalculateTest(double argument, double result, double accuracy)
         {
-            var calculator = new Abs();
+            var calculator = new Sin();
             var testResult = calculator.Calculate(argument);
             Assert.AreEqual(testResult, result, accuracy);
         }

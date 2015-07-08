@@ -6,7 +6,14 @@ namespace Calculator
     {
         public double Calculate(double firstField)
         {
-            return (Math.Sqrt(firstField));
+            if (firstField <= 0)
+            {
+                throw new Exception("the number under the sqrt can't be negative or equal 0");
+            }
+            else
+            {
+                return (Math.Sqrt(firstField));
+            }
         }
     }
 }

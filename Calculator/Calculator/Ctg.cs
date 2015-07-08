@@ -6,7 +6,14 @@ namespace Calculator
     {
         public double Calculate(double firstField)
         {
-            return ((1/Math.Tan(firstField)));
+            if (firstField == 0)
+            {
+                throw new Exception("Ctg can't be equal 0");
+            }
+            else
+            {
+                return ((1/Math.Tan(firstField)));
+            }
         }
     }
 }
