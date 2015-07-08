@@ -44,7 +44,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SubtractCalculationTest.cs" />
+    <Compile Include="TgCalculationTest.cs" />
+    <Compile Include="DivideCalculationTest.cs" />
+    <Compile Include="MiltiplyCalculationTest.cs" />
+    <Compile Include="SinCalculationTest.cs" />
+    <Compile Include="CosCalculationTest.cs" />
     <Compile Include="AbsCalculationTest.cs" />
+    <Compile Include="SqrtCalculationTest.cs" />
+    <Compile Include="CtgCalculationTest.cs" />
     <Compile Include="AddCalculationTest.cs" />
     <Compile Include="PowCalculationTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
