@@ -1,5 +1,4 @@
-﻿using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace Calculator.Tests
 {
@@ -10,9 +9,9 @@ namespace Calculator.Tests
         public void CalculateTest()
         {
             var calculator = new Add();
-            double  testResult = calculator.Calculate(5, 5);
+            double testResult = calculator.Calculate(5, 5);
             double realResult = 10;
-            Assert.Equals(testResult,realResult);
+            Assert.AreEqual(testResult, realResult);
         }
     }
 }
