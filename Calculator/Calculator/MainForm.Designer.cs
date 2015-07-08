@@ -49,6 +49,8 @@ namespace Calculator
             this.Cos = new System.Windows.Forms.Button();
             this.Tg = new System.Windows.Forms.Button();
             this.Ctg = new System.Windows.Forms.Button();
+            this.BubbleSort = new System.Windows.Forms.Button();
+            this.GnomeSort = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // InputLabel
@@ -238,11 +240,39 @@ namespace Calculator
             this.Ctg.UseVisualStyleBackColor = false;
             this.Ctg.Click += new System.EventHandler(this.CalculatorWithOneArg);
             // 
+            // BubbleSort
+            // 
+            this.BubbleSort.BackColor = System.Drawing.Color.Orange;
+            this.BubbleSort.FlatAppearance.BorderSize = 0;
+            this.BubbleSort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BubbleSort.Location = new System.Drawing.Point(15, 186);
+            this.BubbleSort.Name = "BubbleSort";
+            this.BubbleSort.Size = new System.Drawing.Size(81, 32);
+            this.BubbleSort.TabIndex = 14;
+            this.BubbleSort.Text = "BubbleSort";
+            this.BubbleSort.UseVisualStyleBackColor = false;
+            this.BubbleSort.Click += new System.EventHandler(this.ArraySort);
+            // 
+            // GnomeSort
+            // 
+            this.GnomeSort.BackColor = System.Drawing.Color.Orange;
+            this.GnomeSort.FlatAppearance.BorderSize = 0;
+            this.GnomeSort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GnomeSort.Location = new System.Drawing.Point(102, 186);
+            this.GnomeSort.Name = "GnomeSort";
+            this.GnomeSort.Size = new System.Drawing.Size(82, 32);
+            this.GnomeSort.TabIndex = 15;
+            this.GnomeSort.Text = "GnomeSort";
+            this.GnomeSort.UseVisualStyleBackColor = false;
+            this.GnomeSort.Click += new System.EventHandler(this.ArraySort);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.GnomeSort);
+            this.Controls.Add(this.BubbleSort);
             this.Controls.Add(this.Ctg);
             this.Controls.Add(this.Tg);
             this.Controls.Add(this.Cos);
@@ -286,6 +316,8 @@ namespace Calculator
         private Button Cos;
         private Button Tg;
         private Button Ctg;
+        private Button BubbleSort;
+        private Button GnomeSort;
     }
 }
 

@@ -45,17 +45,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="OperationsFactoryTest.cs" />
-    <Compile Include="SubtractCalculationTest.cs" />
-    <Compile Include="TgCalculationTest.cs" />
-    <Compile Include="DivideCalculationTest.cs" />
-    <Compile Include="MiltiplyCalculationTest.cs" />
-    <Compile Include="SinCalculationTest.cs" />
-    <Compile Include="CosCalculationTest.cs" />
-    <Compile Include="AbsCalculationTest.cs" />
-    <Compile Include="SqrtCalculationTest.cs" />
-    <Compile Include="CtgCalculationTest.cs" />
-    <Compile Include="AddCalculationTest.cs" />
-    <Compile Include="PowCalculationTest.cs" />
+    <Compile Include="TwoArg\SubtractCalculationTest.cs" />
+    <Compile Include="OneArg\TgCalculationTest.cs" />
+    <Compile Include="TwoArg\DivideCalculationTest.cs" />
+    <Compile Include="TwoArg\MiltiplyCalculationTest.cs" />
+    <Compile Include="OneArg\SinCalculationTest.cs" />
+    <Compile Include="OneArg\CosCalculationTest.cs" />
+    <Compile Include="OneArg\AbsCalculationTest.cs" />
+    <Compile Include="OneArg\SqrtCalculationTest.cs" />
+    <Compile Include="OneArg\CtgCalculationTest.cs" />
+    <Compile Include="TwoArg\AddCalculationTest.cs" />
+    <Compile Include="TwoArg\PowCalculationTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
