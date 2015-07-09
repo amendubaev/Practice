@@ -4,6 +4,10 @@ using NUnit.Framework;
 
 namespace Calculator.Tests.TwoArg
 {
+    /// <summary>
+    /// Test for division method
+    /// Created 3 testcases
+    /// </summary>
     [TestFixture]
     public class DivideCalculationTest
     {

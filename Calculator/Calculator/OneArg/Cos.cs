@@ -7,8 +7,12 @@ namespace Calculator.OneArg
         /// <summary>
         /// Operation of cosinus
         /// </summary>
-        /// <param name="firstField">Argument</param>
-        /// <returns>Result</returns>
+        /// <param name="firstField">
+        /// Input one argument on the first field
+        /// </param>
+        /// <returns>
+        /// Result of cos
+        /// </returns>
         public double Calculate(double firstField)
         {
             return (Math.Cos(firstField));

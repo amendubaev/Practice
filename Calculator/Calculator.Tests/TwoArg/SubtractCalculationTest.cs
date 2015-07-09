@@ -1,7 +1,12 @@
-﻿using NUnit.Framework;
+﻿using Calculator.TwoArg;
+using NUnit.Framework;
 
 namespace Calculator.Tests
 {
+    /// <summary>
+    /// Test for subtract method
+    /// Created 3 testcases
+    /// </summary>
     [TestFixture]
     public class SubtractCalculationTest
     {

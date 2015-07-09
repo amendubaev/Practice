@@ -6,11 +6,17 @@ namespace Calculator.TwoArg
     public class Divide : ITwoArguments
     {
         /// <summary>
-        /// Operation of division
+        /// Operation of division and added exception if secondField = 0.
         /// </summary>
-        /// <param name="firstField">First argument</param>
-        /// <param name="secondField">Second argument</param>
-        /// <returns>Result</returns>
+        /// <param name="firstField">
+        /// Input one argument on the first field
+        /// </param>
+        /// <param name="secondField">
+        /// Input one argument on the second field
+        /// </param>
+        /// <returns>
+        /// Result firstField/secondField
+        /// </returns>
         public double Calculate(double firstField, double secondField)
         {
             if (secondField == 0)

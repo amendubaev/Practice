@@ -5,10 +5,14 @@ namespace Calculator.OneArg
     public class Ctg : IOneArgument
     {
         /// <summary>
-        /// Operation of cotangens
+        /// Operation of cotangens and added exception if first field = 0
         /// </summary>
-        /// <param name="firstField">Argument</param>
-        /// <returns>Result</returns>
+        /// <param name="firstField">
+        /// Input one argument on the first field
+        /// </param>
+        /// <returns>
+        /// Result of ctg(1/tan)
+        /// </returns>
         public double Calculate(double firstField)
         {
             if (firstField == 0)

@@ -5,8 +5,12 @@
         /// <summary>
         /// Gnome sort method
         /// </summary>
-        /// <param name="array">Input array</param>
-        /// <returns>Output array</returns>
+        /// <param name="array">
+        /// Input array,sorting array by Gnome method
+        /// </param>
+        /// <returns>
+        /// Output array
+        /// </returns>
         public double[] Sort(double[] array)
         {
             double temp_value = 0;

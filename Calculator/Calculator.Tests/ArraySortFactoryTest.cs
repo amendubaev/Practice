@@ -1,8 +1,13 @@
 ﻿using System;
+using Calculator.ArraySort;
 using NUnit.Framework;
 
 namespace Calculator.Tests
 {
+    /// <summary>
+    /// Test for Array Sort Factory method
+    /// Created 2 testcases with Gnome Sort method and Bubble Sort method
+    /// </summary>
     [TestFixture]
     public class ArraySortFactoryTest
     {

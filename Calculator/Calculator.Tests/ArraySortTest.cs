@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using Calculator.ArraySort;
 using NUnit.Framework;
 
 namespace Calculator.Tests
 {
+    /// <summary>
+    /// Test for Array Sort method
+    /// Created 4 testcases with arrays
+    /// </summary>
     [TestFixture]
     public class ArraySortTest
     {

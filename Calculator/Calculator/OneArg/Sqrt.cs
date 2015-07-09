@@ -5,10 +5,14 @@ namespace Calculator.OneArg
     public class Sqrt : IOneArgument
     {
         /// <summary>
-        /// Operation of radical
+        /// Operation of radical and added exception, if firstfield = 0
         /// </summary>
-        /// <param name="firstField">Argument</param>
-        /// <returns>Result</returns>
+        /// <param name="firstField">
+        /// Argument
+        /// </param>
+        /// <returns>
+        /// Result
+        /// </returns>
         public double Calculate(double firstField)
         {
             if (firstField <= 0)

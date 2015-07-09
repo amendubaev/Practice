@@ -3,6 +3,10 @@ using NUnit.Framework;
 
 namespace Calculator.Tests.OneArg
 {
+    /// <summary>
+    /// Test for Abs method
+    /// Created 4 testcases with accuracy 1.0
+    /// </summary>
     [TestFixture]
     public class AbsCalculationTest
     {

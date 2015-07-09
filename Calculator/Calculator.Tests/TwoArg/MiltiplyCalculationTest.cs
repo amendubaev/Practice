@@ -3,6 +3,10 @@ using NUnit.Framework;
 
 namespace Calculator.Tests.TwoArg
 {
+    /// <summary>
+    /// Test for multiplication method
+    /// Created 4 testcases
+    /// </summary>
     [TestFixture]
     public class MultiplyCalculationTest
     {

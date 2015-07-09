@@ -15,8 +15,12 @@ namespace Calculator
         /// <summary>
         /// Array sorting method
         /// </summary>
-        /// <param name="sender">Button</param>
-        /// <param name="e">Operation тame</param>
+        /// <param name="sender">
+        /// Button sender 
+        /// </param>
+        /// <param name="e">
+        /// Operation name
+        /// </param>
         public void ArraySort(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(InputFirstTextBox.Text))
@@ -42,8 +46,12 @@ namespace Calculator
         /// <summary>
         /// Calculator for functions with two arguments
         /// </summary>
-        /// <param name="sender">Button</param>
-        /// <param name="e">Operation name</param>
+        /// <param name="sender">
+        /// Button sender
+        /// </param>
+        /// <param name="e">
+        /// Operation name
+        /// </param>
         private void CalculatorWithTwoArgs(object sender, EventArgs e)
         {
             double firstField = Convert.ToDouble(InputFirstTextBox.Text);
@@ -56,8 +64,12 @@ namespace Calculator
         /// <summary>
         /// Calculator for functions with one argument
         /// </summary>
-        /// <param name="sender">Button</param>
-        /// <param name="e">Operation name</param>
+        /// <param name="sender">
+        /// Button sender
+        /// </param>
+        /// <param name="e">
+        /// Operation name
+        /// </param>
         public void CalculatorWithOneArg(object sender, EventArgs e)
         {
             double firstField = Convert.ToDouble(InputFirstTextBox.Text);
@@ -68,8 +80,12 @@ namespace Calculator
         /// <summary>
         /// Ban on entry words in first field
         /// </summary>
-        /// <param name="sender">TextBox</param>
-        /// <param name="e">Symbol</param>
+        /// <param name="sender">
+        /// TextBox
+        /// </param>
+        /// <param name="e">
+        /// Symbol
+        /// </param>
         private void InputFirstTextBoxKeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && (e.KeyChar != 32) && (e.KeyChar != 59) && (e.KeyChar != 8) && (e.KeyChar != 45) && (e.KeyChar != 44))
@@ -80,8 +96,12 @@ namespace Calculator
         /// <summary>
         /// Ban on entry words in second field
         /// </summary>
-        /// <param name="sender">TextBox</param>
-        /// <param name="e">Symbol</param>
+        /// <param name="sender">
+        /// TextBox
+        /// </param>
+        /// <param name="e">
+        /// Symbol
+        /// </param>
         private void InputSecondTextBoxKeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && (e.KeyChar!= 32) && (e.KeyChar !=59 ) &&(e.KeyChar != 8) && (e.KeyChar != 45) && (e.KeyChar != 44))

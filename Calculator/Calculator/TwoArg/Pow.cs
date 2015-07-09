@@ -5,11 +5,17 @@ namespace Calculator.TwoArg
     public class Pow : ITwoArguments
     {
         /// <summary>
-        /// Oeration of exponent
+        /// Oeration of exponent by using Math.Pow
         /// </summary>
-        /// <param name="firstField">Argument</param>
-        /// <param name="secondField">Exponent</param>
-        /// <returns>Result</returns>
+        /// <param name="firstField">
+        /// Input one argument on the first field
+        /// </param>
+        /// <param name="secondField">
+        /// Input exponent on the second field
+        /// </param>
+        /// <returns>
+        /// Result firstfield^secondfield
+        /// </returns>
         public double Calculate(double firstField, double secondField)
         {
             return Math.Pow(firstField, secondField);

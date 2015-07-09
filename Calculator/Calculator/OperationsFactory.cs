@@ -9,8 +9,12 @@ namespace Calculator
         /// <summary>
         /// Operations with two arguments factory
         /// </summary>
-        /// <param name="operation">Selected operation</param>
-        /// <returns>Result of operation</returns>
+        /// <param name="operation">
+        /// Selected operation
+        /// </param>
+        /// <returns>
+        /// Result of operation
+        /// </returns>
         public static ITwoArguments CreateOperation(string operation)
         {
             switch (operation)

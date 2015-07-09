@@ -1,7 +1,7 @@
 ﻿namespace Calculator.ArraySort
 {
     /// <summary>
-    /// Interface for sorting functionsS
+    /// Created Interface for sorting functions(arrays method)
     /// </summary>
     public interface ISorter
     {

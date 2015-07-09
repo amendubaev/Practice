@@ -3,6 +3,10 @@ using NUnit.Framework;
 
 namespace Calculator.Tests.OneArg
 {
+    /// <summary>
+    /// Test for cos method
+    /// Created 4 testcases with accuracy 0.01
+    /// </summary>
     [TestFixture]
     public class CosCalculationTest
     {

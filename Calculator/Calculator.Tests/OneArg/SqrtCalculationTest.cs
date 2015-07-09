@@ -4,6 +4,10 @@ using NUnit.Framework;
 
 namespace Calculator.Tests.OneArg
 {
+    /// <summary>
+    /// Test for sqrt method
+    /// Created 4 testcases with accuracy 1.0
+    /// </summary>
     [TestFixture]
     public class SqrtCalculationTest
     {

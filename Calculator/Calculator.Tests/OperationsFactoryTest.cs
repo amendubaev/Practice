@@ -1,8 +1,14 @@
 ﻿using System;
+using Calculator.OneArg;
+using Calculator.TwoArg;
 using NUnit.Framework;
 
 namespace Calculator.Tests
 {
+    /// <summary>
+    /// Test for Operation Factory  method
+    /// Created 5 testcases with two argument operations
+    /// </summary>
     [TestFixture]
     public class OperationsFactoryTest
     {
@@ -25,6 +31,10 @@ namespace Calculator.Tests
             OperationsFactory.CreateOperation("Log").GetType();
         }
     }
+    /// <summary>
+    /// Test for one argument method
+    /// Created 6 testcases with operations with 1 argument
+    /// </summary>
     public class TrigonometriaOperationsFactoryTest
     {
         [TestCase(typeof(Sin), "Sin")]

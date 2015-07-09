@@ -4,6 +4,10 @@ using NUnit.Framework;
 
 namespace Calculator.Tests.OneArg
 {
+    /// <summary>
+    /// Test for ctg method
+    /// Created 1 testcase with accuracy 0.01
+    /// </summary>
     [TestFixture]
     public class CtgCalculationTest
     {
