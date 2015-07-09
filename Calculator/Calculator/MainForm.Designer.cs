@@ -68,7 +68,6 @@ namespace Calculator
             this.InputSecondTextBox.Name = "InputSecondTextBox";
             this.InputSecondTextBox.Size = new Size(129, 20);
             this.InputSecondTextBox.TabIndex = 2;
-            this.InputSecondTextBox.KeyPress += new KeyPressEventHandler(this.InputSecondTextBoxKeyPress);
             // 
             // Result
             // 
@@ -95,7 +94,6 @@ namespace Calculator
             this.InputFirstTextBox.Size = new Size(128, 20);
             this.InputFirstTextBox.TabIndex = 1;
             this.InputFirstTextBox.Tag = "";
-            this.InputFirstTextBox.KeyPress += new KeyPressEventHandler(this.InputFirstTextBoxKeyPress);
             // 
             // Add
             // 
