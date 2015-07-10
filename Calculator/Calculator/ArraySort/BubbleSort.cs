@@ -2,6 +2,11 @@
 {
     class BubbleSort : ISorter
     {
+        /// <summary>
+        /// Bubble sort method
+        /// </summary>
+        /// <param name="A">Input aaray</param>
+        /// <returns>Output array</returns>
         public double[] Sort(double[] A)
         {
             for (int i = 0; i < A.Length; i++)

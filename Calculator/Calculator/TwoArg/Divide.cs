@@ -6,6 +6,12 @@ namespace Calculator
 {
     public class Divide : ITwoArguments
     {
+        /// <summary>
+        /// Operation of division
+        /// </summary>
+        /// <param name="firstField">First argument</param>
+        /// <param name="secondField">Second argument</param>
+        /// <returns>Result</returns>
         public double Calculate(double firstField, double secondField)
         {
             if (secondField == 0)

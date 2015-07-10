@@ -4,9 +4,13 @@ namespace Calculator
 {
     public static class OperationsFactory
     {
+        /// <summary>
+        /// Operations with two arguments factory
+        /// </summary>
+        /// <param name="operation">Selected operation</param>
+        /// <returns>Result of operation</returns>
         public static ITwoArguments CreateOperation(string operation)
         {
-           
             switch (operation)
             {
                 case "Multiply": return new Multiply();
@@ -17,7 +21,11 @@ namespace Calculator
                 default: throw new Exception("Unknown operation!");
             }
         }
-
+        /// <summary>
+        /// Operations with one argument factory
+        /// </summary>
+        /// <param name="operation">Selected operation</param>
+        /// <returns>Result of operation</returns>
         public static IOneArgument CreateTrigonometriaOperation(string operation)
         {
             switch (operation)

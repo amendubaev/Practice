@@ -4,6 +4,11 @@ namespace Calculator
 {
     public class Tg : IOneArgument
     {
+        /// <summary>
+        /// Operation of tangens
+        /// </summary>
+        /// <param name="firstField">Argument</param>
+        /// <returns>Result</returns>
         public double Calculate(double firstField)
         {
             if (firstField == 90)

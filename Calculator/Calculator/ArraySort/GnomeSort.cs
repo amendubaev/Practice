@@ -1,10 +1,16 @@
 ﻿namespace Calculator
 {
-    internal class GnomeSort : ISorter
+    class GnomeSort : ISorter
     {
-        public double[] GnomeSort(double[] array)
+        /// <summary>
+        /// Gnome sort method
+        /// </summary>
+        /// <param name="array">Input array</param>
+        /// <returns>Output array</returns>
+        public double[] Sort(double[] array)
         {
-            for (int i = 1, temp_value; i < array.Length;)
+            double temp_value = 0;
+            for (int i = 1; i < array.Length;)
             {
                 if (array[i - 1] <= array[i])
                     i += 1;
@@ -18,4 +24,7 @@
                         i = 1;
                 }
             }
+            return array;
         }
+    }
+}

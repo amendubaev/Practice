@@ -10,12 +10,11 @@ namespace Calculator
         {
             InitializeComponent();
         }
-
-        private void MainFormLoad(object sender, EventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// Array sorting method
+        /// </summary>
+        /// <param name="sender">Button</param>
+        /// <param name="e">Operation тame</param>
         public void ArraySort(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(InputFirstTextBox.Text))
@@ -38,7 +37,11 @@ namespace Calculator
             }
             Result.Text = result;
         }
-
+        /// <summary>
+        /// Calculator for functions with two arguments
+        /// </summary>
+        /// <param name="sender">Button</param>
+        /// <param name="e">Operation name</param>
         private void CalculatorWithTwoArgs(object sender, EventArgs e)
         {
             double firstField = Convert.ToDouble(InputFirstTextBox.Text);
@@ -48,7 +51,11 @@ namespace Calculator
             Result.Text = factoryForTwoArgs.Calculate(firstField, secondField).ToString();
 
         }
-
+        /// <summary>
+        /// Calculator for functions with one argument
+        /// </summary>
+        /// <param name="sender">Button</param>
+        /// <param name="e">Operation name</param>
         public void CalculatorWithOneArg(object sender, EventArgs e)
         {
             double firstField = Convert.ToDouble(InputFirstTextBox.Text);
@@ -56,8 +63,11 @@ namespace Calculator
             IOneArgument factoryForOneArg = OperationsFactory.CreateTrigonometriaOperation(nameButton);
             Result.Text = factoryForOneArg.Calculate(firstField).ToString();
         }
-
-
+        /// <summary>
+        /// Ban on entry words in first field
+        /// </summary>
+        /// <param name="sender">TextBox</param>
+        /// <param name="e">Symbol</param>
         private void InputFirstTextBoxKeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && (e.KeyChar != 32) && (e.KeyChar != 59) && (e.KeyChar != 8) && (e.KeyChar != 45) && (e.KeyChar != 44))
@@ -65,7 +75,11 @@ namespace Calculator
                 e.Handled = true;
             }
         }
-
+        /// <summary>
+        /// Ban on entry words in second field
+        /// </summary>
+        /// <param name="sender">TextBox</param>
+        /// <param name="e">Symbol</param>
         private void InputSecondTextBoxKeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && (e.KeyChar!= 32) && (e.KeyChar !=59 ) &&(e.KeyChar != 8) && (e.KeyChar != 45) && (e.KeyChar != 44))

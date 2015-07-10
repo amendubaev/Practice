@@ -1,5 +1,4 @@
 ﻿using System;
-using System.CodeDom;
 using NUnit.Framework;
 
 namespace Calculator.Tests
@@ -20,7 +19,7 @@ namespace Calculator.Tests
         }
 
         [Test]
-        [ExpectedException(typeof (Exception))]
+        [ExpectedException(typeof(Exception))]
         public void OperationForLog()
         {
             Type resultType = OperationsFactory.CreateOperation("Log").GetType();

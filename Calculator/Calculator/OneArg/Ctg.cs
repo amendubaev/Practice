@@ -4,6 +4,11 @@ namespace Calculator
 {
     public class Ctg : IOneArgument
     {
+        /// <summary>
+        /// Operation of cotangens
+        /// </summary>
+        /// <param name="firstField">Argument</param>
+        /// <returns>Result</returns>
         public double Calculate(double firstField)
         {
             if (firstField == 0)
