@@ -1,4 +1,4 @@
-﻿namespace Calculator
+﻿namespace Calculator.ArraySort
 {
     /// <summary>
     /// Interface for sorting functionsS

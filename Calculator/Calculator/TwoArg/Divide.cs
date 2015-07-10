@@ -1,8 +1,7 @@
 ﻿
 using System;
-using System.Diagnostics.Eventing.Reader;
 
-namespace Calculator
+namespace Calculator.TwoArg
 {
     public class Divide : ITwoArguments
     {

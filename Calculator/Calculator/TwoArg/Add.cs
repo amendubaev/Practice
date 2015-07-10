@@ -1,4 +1,4 @@
-﻿namespace Calculator
+﻿namespace Calculator.TwoArg
 {
     public class Add : ITwoArguments
     {

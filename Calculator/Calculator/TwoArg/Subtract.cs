@@ -1,5 +1,5 @@
 ﻿
-namespace Calculator
+namespace Calculator.TwoArg
 {
     public class Subtract : ITwoArguments
     {

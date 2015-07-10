@@ -1,4 +1,4 @@
-﻿namespace Calculator
+﻿namespace Calculator.TwoArg
 {
     /// <summary>
     /// Interfase for functions with two arguments

@@ -1,6 +1,6 @@
-﻿namespace Calculator
+﻿namespace Calculator.ArraySort
 {
-    class BubbleSort : ISorter
+    public class BubbleSort : ISorter
     {
         /// <summary>
         /// Bubble sort method

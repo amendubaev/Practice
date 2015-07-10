@@ -22,7 +22,7 @@ namespace Calculator.Tests
         [ExpectedException(typeof(Exception))]
         public void OperationForLog()
         {
-            Type resultType = OperationsFactory.CreateOperation("Log").GetType();
+            OperationsFactory.CreateOperation("Log").GetType();
         }
     }
     public class TrigonometriaOperationsFactoryTest
@@ -44,7 +44,7 @@ namespace Calculator.Tests
         [ExpectedException(typeof(Exception))]
         public void OperationForLog()
         {
-            Type resultType = OperationsFactory.CreateTrigonometriaOperation("Sec").GetType();
+            OperationsFactory.CreateTrigonometriaOperation("Sec").GetType();
         }
     }
 }

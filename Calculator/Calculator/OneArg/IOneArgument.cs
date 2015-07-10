@@ -1,4 +1,4 @@
-﻿namespace Calculator
+﻿namespace Calculator.OneArg
 {
     /// <summary>
     /// Interfase for functions with one argument

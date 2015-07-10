@@ -1,6 +1,7 @@
-﻿using NUnit.Framework;
+﻿using Calculator.TwoArg;
+using NUnit.Framework;
 
-namespace Calculator.Tests
+namespace Calculator.Tests.TwoArg
 {
     [TestFixture]
     public class AddCalculationTest

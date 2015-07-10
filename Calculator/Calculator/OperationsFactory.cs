@@ -1,4 +1,6 @@
 ﻿using System;
+using Calculator.OneArg;
+using Calculator.TwoArg;
 
 namespace Calculator
 {

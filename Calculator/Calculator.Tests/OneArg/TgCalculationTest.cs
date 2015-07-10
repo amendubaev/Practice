@@ -1,7 +1,8 @@
 ﻿using System;
+using Calculator.OneArg;
 using NUnit.Framework;
 
-namespace Calculator.Tests
+namespace Calculator.Tests.OneArg
 {
     [TestFixture]
     public class TgCalculationTest

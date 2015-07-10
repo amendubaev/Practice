@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Calculator
+namespace Calculator.ArraySort
 {
-    class ArraySortFactory
+    public class ArraySortFactory
     {
         /// <summary>
         /// Sorting factory

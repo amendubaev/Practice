@@ -1,6 +1,6 @@
-﻿namespace Calculator
+﻿namespace Calculator.ArraySort
 {
-    class GnomeSort : ISorter
+    public class GnomeSort : ISorter
     {
         /// <summary>
         /// Gnome sort method
